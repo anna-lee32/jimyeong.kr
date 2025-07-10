@@ -1,0 +1,104 @@
+@media screen and (max-width : 1140px) {
+
+}
+@media screen and (max-width: 1000px) {
+    html {
+        font-size: 14px;
+    }
+
+}
+
+@media screen and (max-width : 900px) {
+    html {
+        font-size: 13px;
+    }
+}
+@media screen and (max-width : 768px) {
+    html {
+        font-size: 12px;
+    }
+    .cv-container {
+        grid-template-columns: 1fr; /* Stack on small screens */
+        width: 70%;
+        gap: 2.5rem;
+    }
+    .left {
+        text-align: left;
+    }
+    .cv-container .left-text  {
+       flex-direction: row;
+    }
+    .right {
+        margin-top: 0;
+    }
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .cv-container .right h2::before {
+        left: -17px;
+        top: 8px;
+    }
+   
+}
+
+@media screen and (max-width : 607px) {
+    .bar .logo a {
+        padding-left: 1rem;
+    }
+    header nav .menu > a {
+        padding: 1rem;
+    }
+    header nav .menu .lang {
+        gap: 0.5rem;
+    }
+    label {
+        width: 5rem;
+        height: 2rem;
+    }
+    label::after{
+        width: 2.2rem;
+        height: 1.65rem;
+        border-radius: 30px;
+        top: 0.22rem;
+        left: 0.35rem;
+    }
+    input:checked + label::after {
+        left: 4.7rem;
+        transform: translateX(-100%);
+        background: linear-gradient(180deg, #777,#3a3a3a);
+    }
+    label:active::after {
+        width: 3rem;
+    }
+    
+
+}
+
+
+@media screen and (max-width : 480px) {
+    html {
+        font-size: 11px;
+    }
+    header .bar {
+        flex-direction: column;
+    }
+    .bar .logo a {
+        padding-left: 0;
+    }
+    .profile-bio .bio h2 {
+        font-size: 2.5rem;
+    }
+    .profile-bio {
+        gap: 1.5rem;
+    }
+
+}
+
+@media screen and (max-width : 320px) {
+
+    html {
+        font-size: 9px;
+    }
+}
+

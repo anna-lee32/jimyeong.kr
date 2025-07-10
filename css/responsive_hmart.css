@@ -1,0 +1,111 @@
+@charset "utf-8";
+
+@media screen and (max-width : 1140px) {
+    section .container {
+        width: 900px;
+    }
+    .vids-work {
+        gap: 10rem;
+    }
+    section .do-me .do-explain .do-inner h3 {
+        font-size: 1rem;
+    }
+    section .container-KVD .row img {
+        width: 250px;
+        height: 250px;
+    }
+    .iphone-frame img {
+        width: 250px;
+    }
+    section .about-ad .ad img {
+        width: 450px;
+        height: 450px;
+    }
+    #home .title h2 {
+        font-size: 3.5rem;
+    }
+    #home .title h4 {
+        font-size: 1.3rem;
+    }
+
+    
+    section .title h2 {
+        font-size: 3.5rem;
+    }
+    section .title h6{
+        font: 0.8rem;
+    }
+    section .title p {
+        font-size: 1.3rem;
+    }
+    
+    section .about-sns h4 {
+        font-size: 1.2rem;
+    }
+    section .about-sns .sns img {
+        width: 230px;
+    }
+    section .about-sns .sns h3 {
+        font-size: 1.8rem;
+        text-wrap: nowrap;
+    }
+}
+
+
+@media screen and (max-width : 900px) {
+    html {
+        font-size: 13px;
+    }
+    main .container {
+        width: 750px;
+    }
+    section .container-KVD .row img {
+        width: 200px;
+        height: 200px;
+    }
+    .iphone-frame img {
+        width: 200px;
+    } 
+    section .about-sns .sns img {
+        width: 200px;
+    }
+    section .about-ad .ad img {
+        width: 350px;
+        height: 350px;
+    }
+}
+
+@media screen and (max-width : 768px) {
+    html {
+        font-size: 12px;
+    }
+    #home .do-me {
+        justify-content: center;
+    }
+    section .container {
+        width: 600px;
+    }
+    section .container-KVD .row img {
+        width: 150px;
+        height: 150px;
+    }
+    .iphone-frame img {
+        width: 150px;
+    } 
+    section .about-sns .sns img {
+        width: 150px;
+    }
+    section .about-ad .ad img {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media screen and (max-width : 627px) {
+    .container {
+        width: 400px;
+    }
+    #home .do-me {
+        justify-content: center;
+    }
+}

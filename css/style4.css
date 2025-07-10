@@ -1,0 +1,429 @@
+@charset "utf-8";
+
+
+/* main page */
+main {
+    margin-top: 3rem;
+}
+#home{
+    padding: 2rem 0;
+}
+
+#home .title h4{
+    font-size: 1.3rem;
+    font-family: 'SUIT-Regular';
+    color: #E92126;
+    text-align: center;
+}
+#home .title h2{
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'SUIT-Regular';
+    font-weight: 700;
+}
+#home .do-text p {
+    font-size: 1.2rem;
+    text-align: center;
+    color: #616161;
+    font-family: 'SUIT-Regular';
+}
+#home .do-text img{
+    display: block; 
+    width: 17rem;
+    margin: 0 auto;
+}
+
+/* about의 박스 */
+#home .do-me {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5rem;
+    margin-bottom: 10rem;
+    gap: 2rem;
+}
+
+#home .do-me .do-inner {
+    width: 25%;
+    background-color: #f4f4f4;
+    color: #616161;
+    padding: 2rem;
+    border-radius: 5px;
+    font-family: 'SUIT-Regular';
+    transition: all .5s;
+}
+
+#home .do-me .do-inner:hover {
+    background-color: #E92126;
+    color: #f4f4f4;
+}
+#home .do-me .do-inner h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+#home .do-me .do-inner p {
+    font-size: 1.2rem;
+}
+
+
+/* about의 darkmode */
+body.dark-mode #home .do-text p {
+    color: #fff;
+}
+
+body.dark-mode #home .do-me .do-inner {
+    color: #fff;
+    background-color: #2b2b2b;
+}
+
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+/* filter button */
+.container ul {
+    font-family: 'SUIT-Regular';
+    font-weight: 700;
+    font-size: 1.2rem;
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    /* margin-left: 2rem; */
+    margin-bottom: 3rem;
+}
+.container ul li {
+    background-color: #E8E9EB;
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    color: #727374;
+    cursor: pointer;
+}
+.container ul li.on {
+    background-color: #E92126;
+    color: #fff;
+}
+
+/* filter의 darkmode */
+body.dark-mode .container ul li {
+    background-color: #3a3a3a;
+    color: #f4f4f4;
+}
+body.dark-mode .container ul li.on {
+    background-color: #E92126;
+    color: #fff;
+}
+
+
+
+/* KVD starts here */
+
+
+section .sub-title h4 {
+    font-size: 1.4rem;
+    color: #E92126;
+}
+section .sub-title h3 { 
+    font-size: 2rem;    
+}
+
+/* KVD-iphone on play */
+.vids-work {
+    display: flex;
+    gap: 20rem;
+    justify-content: center;
+    height: 500px;
+}
+.vids-work .item {
+    width: 20%;
+    display: block;
+    position: relative;
+    border-radius: 35px;
+    overflow: hidden;
+}
+.vids-work .item video {
+    width: 94.5%;
+    height: 452px;
+    position: absolute;
+    top: 14px;
+    left: 50%;
+    transform: translateX(-49.6%);
+    z-index: 5;
+    border-radius: 20px;
+}
+.vids-work .item img {
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+}
+
+/* common section-title */
+section .title {
+   text-align: center;
+   margin-top: 8rem;
+}
+section .title h6 {
+    letter-spacing: 0.5rem;
+    font-size: 1rem;
+    font-family: 'SUIT-Regular';
+    color: #E92126;
+}
+section .title h2 {
+    font-size: 3rem;
+    font-family: 'SUIT-Regular';
+    font-weight: bold;
+}
+section .title p{
+    font-family: 'SUIT-Regular';
+    margin: 2rem 0 6rem 0;
+    font-size: 1.5rem;
+}
+
+/* KVD explanation */
+section .do-me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    gap: 5rem;
+}
+
+section .do-me .do-explain .do-inner {
+    width: 100%;
+    margin-bottom: 5rem;
+    color: #616161;
+    padding: 1rem 2.5rem;
+    font-family: 'SUIT-Regular';
+    text-align: center;
+    background-color: #f4f4f4;
+    border-radius: 35px;
+}
+section .do-me .do-explain .do-inner h3 strong {
+    color: #E92126;
+    font-weight: bold;
+}
+
+/* do-explain 의 darkmode */
+body.dark-mode section .do-me .do-explain .do-inner {
+    color: #fff;
+    background-color: #3a3a3a;
+}
+
+
+section .do-me .do-explain .do-inner h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+    font-family: 'SUIT-Regular';
+}
+
+
+
+/* KVD thumbnail-pics */
+section .container-KVD {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    margin-top: 300px;
+    
+}
+section .container-KVD .wrapper {
+    display: flex;
+    gap: 20px;
+    transform: rotate(-10deg);
+    opacity: 0;
+}
+section .container-KVD .row img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.iphone-frame {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+}
+
+.iphone-frame img {
+    width: 300px;
+}
+
+
+/* SNS work*/
+
+.wrapper {
+    margin-top: 3rem;
+}
+
+section .about-sns h4 {
+    font-size: 1.4rem;
+    color: #E92126;
+}
+
+section .about-sns .sns img {
+    width: 250px;
+}
+section .about-sns .sns .description img {
+    width: 3rem;
+}
+
+section .about-sns .right {
+    display: flex;
+    align-items: center;
+    padding-bottom: 3rem;
+    /* transform: rotate(-10deg); */
+}
+
+
+section .about-sns .right .description {
+    text-align: right;
+    padding-right: 3rem;
+}
+
+section .about-sns .sns h3 {
+    color: #E92126;
+    font-family: 'SUIT-Regular';
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+section .about-sns .sns h5, p {
+    font-family: 'SUIT-Regular';
+    font-size: 1.2rem;
+    padding: 0.3rem 0;
+}
+/* 영상사이즈 조절 */
+/* section .about-sns .sns {
+    display: flex;
+    gap: 20rem;
+    justify-content: center;
+    height: 500px;
+} */
+section .about-sns .sns .item {
+    /* width: 20%; */
+    display: block;
+    position: relative;
+    border-radius: 35px;
+    overflow: hidden;
+}
+section .about-sns .sns .item video {
+    width: 94.5%;
+    /* height: 452px; */
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-49.6%);
+    z-index: 9;
+    /* border-radius: 20px; */
+}
+
+
+
+
+
+section .about-sns .left {
+    display: flex;
+    align-items: center;
+    /* transform: rotate(10deg); */
+}
+section .about-sns .left .description {
+    text-align: left;
+    padding-left: 2rem;
+}
+section .about-sns .left h3 {
+    padding-right: 2rem;
+}
+body.dark-mode section .about-ad .ad .side-title h3  {
+    color: #b9b9b9;
+}
+
+
+
+
+
+/* for scroll animation */
+
+/* Initially position the elements off-screen */
+/* Animate the elements sliding in from outside the page */
+.sns.left {
+    transform: translate(-150px, 50px) rotate(-10deg); /* Off-screen left */
+    opacity: 0;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.sns.right {
+    transform: translate(150px, -50px) rotate(10deg); /* Off-screen right */
+    opacity: 0;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+
+}
+
+.sns.visible {
+    transform: translate(0,0) rotate(0deg); /* Keep the tilt */
+    opacity: 1;
+    justify-content: center;
+}
+
+/* AD */
+section .about-ad .explain{
+    display: flex;
+    gap: 3rem;
+    margin: 10rem 0;
+}
+
+section .about-ad .ad .left h3{
+    margin-top: 1rem;
+    text-align: center;
+}
+section .about-ad .ad .even h3{
+    margin-top: 2rem;
+    text-align: center;
+}
+
+section .about-ad .ad .side-title h6 {
+    letter-spacing: 0.5rem;
+    font-size: 1rem;
+    font-family: 'SUIT-Regular';
+    color: #E92126;
+}
+
+/* section .about-ad .ad .right .side-title h6 {
+    text-indent: 0.8rem;
+}
+section .about-ad .ad .odd .side-title h6{
+    text-indent: -0.8rem;
+} */
+
+section .about-ad .ad .side-title h3 {
+    color: #616161;
+    font-family:'SUIT-Regular';
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+section .about-ad .right,.odd {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+section .about-ad .ad .odd {
+    text-align: right;
+}
+
+section .about-ad .ad .side-title {
+    margin-bottom: 2rem;
+}
+section .about-ad .ad .side-text h5, p {
+    font-family: 'SUIT-Regular';
+    font-size: 1.2rem;
+    padding: 0.3rem 0;
+    flex-wrap: wrap;
+}

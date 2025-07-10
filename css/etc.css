@@ -1,0 +1,243 @@
+@charset "utf-8";
+
+
+/* main page */
+
+#home{
+    margin-top: 13rem;
+}
+
+/* main > image boxes */
+#home .do-me {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 5rem;
+}
+
+/* dark-mode body */
+body.dark-mode #home .do-me .do-inner {
+    color: #fff;
+    background-color: #2b2b2b;
+}
+
+#home .do-me .do-inner {
+    width: 25%;
+    background-color: #f4f4f4;
+    color: #616161;
+    padding: 2rem;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+    margin-top: 5rem;
+}
+/* light-mode body */
+
+
+/* #home .do-me .do-inner {
+    width: 300px;
+}
+#home .do-me .do-inner img {
+    width: 100%;
+    
+} */
+
+/* Main title */
+/* #home .title {
+    margin-top: 20rem;
+} */
+#home .title {
+    margin-top: 6rem;
+}
+#home .title h2{
+    text-align: center;
+    font-size: 2rem;
+    font-family: "Afacad", sans-serif;
+    font-weight: bold;
+    color: #616161;
+}
+#home .title h2:nth-child(2) {
+    text-shadow:
+    -1px -1px 0 #616161,
+    1px -1px 0 #616161,
+    -1px 1px 0 #616161,
+    1px 1px 0 #616161;
+    color: #F4F4F4;
+}
+
+section .title h6 {
+    letter-spacing: 0.3rem;
+    font-size: 1.2rem;
+    font-family: 'SUIT-Regular';
+    color: #f3c200;
+    text-align: center;
+}
+
+section .about-ad .ad .left h3{
+    margin-top: 1rem;
+    text-align: center;
+    font-family: 'SUIT-Regular';
+    font-weight: 100;
+}
+section .about-ad .ad .even h3{
+    margin-top: 1rem;
+    text-align: center;
+    font-family: 'SUIT-Regular';
+    font-weight: 100;
+}
+
+/* AD */
+section .about-ad .explain{
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 6rem;
+}
+section .about-ad .them {
+    margin-top: 13rem;
+}
+
+section .about-ad .explain .right {
+    margin-top: 2rem;
+}
+section .about-ad .explain .odd {
+    margin-top: 2rem;
+}
+
+section .about-ad .ad .side-title h6 {
+    letter-spacing: 0.3rem;
+    font-size: 1rem;
+    font-family: 'SUIT-Regular';
+    color: #f3c200;
+}
+
+/* section .about-ad .ad .right .side-title h6 {
+    text-indent: 0.8rem;
+}
+section .about-ad .ad .odd .side-title h6{
+    text-indent: -0.8rem;
+} */
+
+section .about-ad .ad .side-title h3 {
+    color: #616161;
+    font-family: 'SUIT-Regular';
+    font-weight: bold;
+    font-size: 2rem;
+}
+/* section .about-ad .right,.odd {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+} */
+section .about-ad .ad .odd {
+    text-align: right;
+}
+
+section .about-ad .ad .side-title {
+    margin-bottom: 1.3rem;
+}
+section .about-ad .ad .side-text h5, p {
+    font-family:'SUIT-Regular';
+    font-size: 1.2rem;
+    padding-top: 0.3rem;
+    flex-wrap: wrap;
+}
+section .about-ad .ad .side-text h5 {
+    margin-top: 1rem;
+}
+
+section .about-ad .ad .side-text img {
+    margin-top: 0.5rem;
+    width: 3rem;
+}
+
+ .animateit {
+    width: 500px;
+    display: flex;
+    align-items: center ;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin-inline: auto;
+    height: 6rem;
+    margin-top: 5rem;
+    mask-image: linear-gradient(
+        to right,
+        rgba(0,0,0,0),
+        rgba(0,0,0,1) 20%,
+        rgba(0,0,0,1) 80%,
+        rgba(0,0,0,0)
+    );
+ }
+
+ .scroll-track {
+    display: flex;
+    align-items: center;
+    animation: scroll-left 20s linear infinite;
+}
+
+.item {
+    flex-shrink: 0;
+    margin-right: 1rem; /* Small space between items */
+}
+
+/* darkmode on */
+body.dark-mode .animateit {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+ .animateit:hover .item {
+    animation-play-state: paused;
+ }
+
+
+ @keyframes scrollleft {
+    to {
+        left: -60px;
+    }
+    
+ }
+
+.animateit .item img {
+    width: 3rem;
+}
+ 
+ .animateit .item {
+   width: auto;
+    height: auto;
+    position: absolute;
+    left: max(calc(60px * 6), 100%);
+    animation-name: scrollleft;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+
+.item1 {
+    animation-delay: calc(10s / 6 * (6 - 1) * -1);
+}
+
+.item2 {
+    animation-delay: calc(10s / 6 * (6 - 2) * -1);
+}
+
+.item3 {
+    animation-delay: calc(10s / 6 * (6 - 3) * -1);
+}
+
+.item4 {
+    animation-delay: calc(10s / 6 * (6 - 4) * -1);
+}
+
+.item5 {
+    animation-delay: calc(10s / 6 * (6 - 5) * -1);
+}
+
+.item6 {
+    animation-delay: calc(10s / 6 * (6 - 6) * -1);
+}
+
+

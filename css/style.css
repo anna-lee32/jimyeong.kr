@@ -1,0 +1,102 @@
+@charset "utf-8";
+
+/* @font-face {
+    font-family: 'grotesque_bold';
+    src: url(../font/Regular/Bricolage_Grotesque/static/BricolageGrotesque-Bold.ttf);
+}
+@font-face {
+    font-family: 'grotesque_light';
+    src: url(../font/Regular/Bricolage_Grotesque/static/BricolageGrotesque-Light.ttf);
+} */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* text-align: center; */
+}
+
+/* main */
+
+
+body {  
+    width: 100%;    
+}
+
+main .home {
+    display: flex;    
+    flex-direction: row;
+    text-align: left;                
+    align-items: center;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+main .home .intro_text {
+   display: flex;
+   flex-direction: column;   
+    justify-content: center;
+}
+
+main .home .intro-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.home .intro_text > h2 {
+    text-wrap: nowrap;
+    font-family: "Afacad", sans-serif;
+    font-size: 5rem;
+    font-weight: 700;
+}
+main .home .intro_text p {
+    font-size: 2rem;
+    padding: 0 1rem;
+    font-family: "Afacad", sans-serif;
+}
+
+
+
+main .home .intro-wrap .intro_button {
+    padding: 0.2rem;
+}
+main .home .intro-wrap .intro_button a {
+    display: inline-block;
+    transition: transform 0.5s ease;
+    font-family: 'SUIT-Regular';
+    font-size: 1.3rem;
+}
+main .home .intro-wrap .intro_button a:hover {
+    font-family: 'SUIT-Regular';
+    font-weight: 700;
+    transform: translateY(-2px) scale(1.05);
+
+}
+main .home .intro-wrap .intro_button #button_profile {
+    background-color: #f4f4f4;
+    padding: 0.8rem 1.5rem;    
+    border-radius: 5px;
+    margin-right: 20px;
+    color: #000;
+}
+
+main .home .intro-wrap .intro_button #button_portfolio {
+    background-color: #000;
+    padding: 0.8rem 1.5rem;    
+    border-radius: 5px;
+    color: #fff;
+   
+}
+main .home .profile_pic {
+    width: 500px;
+}
+main .home .profile_pic img {
+    width: 100%;
+}
+
+
+

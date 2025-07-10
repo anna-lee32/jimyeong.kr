@@ -1,0 +1,315 @@
+@charset "utf-8";
+
+/* @font-face {
+    font-family: 'grotesk';
+    src: url(../font/Regular/Bricolage_Grotesque/static/BricolageGrotesque-ExtraBold.ttf);
+} */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* text-align: center; */
+}
+
+main {
+    margin-top: 10rem;
+}
+
+.profile-bio {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 5rem;
+}
+
+
+.profile-bio .profile-image{
+    display: flex;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    background: gray; /* Placeholder */
+    border-radius: 50%;
+}
+ 
+.profile-bio .profile-image img {
+  width: 200px;
+}
+
+.profile-bio .bio h2 {
+     font-size: 3rem;
+     font-weight: bold;
+     font-family: "Afacad", sans-serif;
+}
+
+.profile-bio .bio p {
+     font-size: 1.5rem;
+     color: #777;
+     font-family: "Afacad", sans-serif;
+     font-weight: 400;
+}
+
+.vertical-line {
+    background-color: #666;
+    opacity: 40%;
+    width: 100%;
+}
+
+
+.cv-container {
+    display: grid;
+    grid-template-columns: 1fr 0.1rem 1fr; /* Two Equal Columns */
+    gap: 3rem;
+    padding: 4rem 0;
+    width: 80%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.cv-container h2 {
+    margin-bottom: 1rem;
+    font-family: 'SUIT-Regular';
+    position: relative;
+    font-size: 2rem;
+    font-weight: bold;
+    z-index: 9;
+    display: inline-block;
+}
+.cv-container h4 {
+  font-size: 1.4rem;
+  color: #666;
+  font-family: 'SUIT-Regular';
+}
+.cv-container .diplomas h3 {
+  font-family: 'SUIT-Regular';
+  font-size: 1.3rem;
+   color: #666;
+   padding-bottom: 0.3rem;
+}
+.cv-container p {
+  font-size: 1.2rem;
+  font-family: 'SUIT-Regular';
+}
+.cv-container .abilities .skills-box {
+  font-family: 'SUIT-Regular';
+  font-size: 1.2rem;
+}
+
+/* 동그라미 노랑이 어케 만듬 */
+.cv-container .left h2::before {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 30px;
+    background: #f8db77;
+    opacity: 50%;
+    left: -1rem;
+    top: 0.8rem;
+    border-radius: 50%;
+    z-index: -20;
+}
+
+.cv-container .right h2::before {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 30px;
+    background: #f8db77;
+    opacity: 50%;
+    left: -1rem;
+    top: 0.8rem;
+    border-radius: 50%;
+    z-index: -20;
+}
+
+/* column-flex */
+.cv-container .left-text {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 1.5rem;
+}
+.cv-container .right-text {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* left Column */
+.left {
+    text-align: right;
+    position: relative;
+    display: inline-block;
+    margin-top: 2rem;
+}
+.diplomas {
+    margin-top: 5rem;
+}
+.certification {
+    margin-top: 5rem;
+}
+
+/* right Column */
+.right {
+    position: relative;
+    display: inline-block;
+    margin-top: 6rem;
+}
+
+
+.abilities {
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+}
+
+p {
+    font-size: 1rem;
+    color: #666;
+    margin: 5px 0;
+    text-wrap: nowrap;
+}
+
+.skills-box {
+    background: lightgray;
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+
+
+
+
+/* Animation Keyframes */
+@keyframes slideInLine {
+    from {
+      height: 0;
+    }
+    to {
+      height: 100%;
+    }
+  }
+  
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 0.5;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Set initial states */
+  .vertical-line {
+    height: 0;
+    animation: slideInLine 0.8s ease-out forwards;
+    animation-delay: 0.2s;
+  }
+  
+  .left-text,
+  .diplomas {
+    opacity: 0;
+    animation: slideInLeft 0.8s ease-out forwards;
+  }
+  
+  .left-text,
+  .certification {
+    opacity: 0;
+    animation: slideInLeft 0.8s ease-out forwards;
+  }
+  
+  .right-text,
+  .abilities {
+    opacity: 0;
+    animation: slideInRight 0.8s ease-out forwards;
+  }
+  
+  .skills-box {
+    animation: slideInRight 0.8s ease-out forwards;
+  }
+  
+  /* Animation Delay per item */
+  .left-text:nth-of-type(1) { animation-delay: 1s; }
+  .left-text:nth-of-type(2) { animation-delay: 1.3s; }
+  .diplomas { animation-delay: 1.6s; }
+  .certification { animation-delay: 1.9s; }
+  
+  
+  .right-text:nth-of-type(1) { animation-delay: 2s; }
+  .right-text:nth-of-type(2) { animation-delay: 2.3s; }
+  .right-text:nth-of-type(3) { animation-delay: 2.6s; }
+  
+  .abilities { animation-delay: 2.9s; }
+  .skills-box { animation-delay: 2.9s; }
+  
+  /* Optional: Trigger on scroll */
+  .cv-container.animate .vertical-line,
+  .cv-container.animate .left-text,
+  .cv-container.animate .right-text,
+  .cv-container.animate .diplomas,
+  .cv-container.animate .abilities,
+  .cv-container.animate .skills-box {
+    animation-play-state: running;
+  }
+  
+
+
+
+
+/* animation */
+
+
+@media (max-width: 768px) {
+    .cv-container {
+        grid-template-columns: 1fr; /* Stack on small screens */
+        width: 70%;
+        gap: 2.5rem;
+    }
+  
+    .left {
+        text-align: left;
+    }
+    .cv-container .left-text  {
+       flex-direction: row;
+    }
+    .right {
+        margin-top: 0;
+    }
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .cv-container .right h2::before {
+        left: -17px;
+        top: 8px;
+    }
+
+}
+
+

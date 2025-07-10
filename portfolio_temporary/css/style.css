@@ -1,0 +1,309 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 9;
+    padding: 1rem;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+header nav ul {
+    display: flex;
+
+}
+
+header nav ul li {
+    padding: 10px;
+}
+
+header button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+header h1 button {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+header nav button {
+    font-size: 1.2rem;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.5)), url('../images/me.jpg') no-repeat center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+main h4 {
+    font-size: 2rem;
+}
+
+main h2 {
+    font-size: 3.5rem;
+    margin: 2rem 0;
+}
+
+main p {
+    /* p 태그 전체의 너비를 잡아서 기본 구조에 맞게 디자인 맞추기 */
+    max-width: 500px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+}
+
+main .download {
+    background-color: transparent;
+    border: 3px solid #fff;
+    border-radius: 20px;
+    padding: 1rem 2rem;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 3rem;
+}
+
+main .mouse {
+    width: 25px;
+    height: 25px;
+    border-left: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    position: absolute;
+    bottom: 1rem; left: 50%;
+    /* transform에 한꺼번에 여러개 쓸때는 쉼표 없이 띄어주기 */
+    transform: translateX(-50%) rotate(-45deg);
+    animation: updown 1s infinite;
+}
+@keyframes updown {
+    0% {bottom: 1rem;}
+    50% {bottom: 1.5rem;}
+    100% {bottom: 1rem;}
+}
+
+main h2 span::after{
+    content: '';
+    height: 40px;
+    width: 3px;
+    background-color: #fff;
+    display: inline-block;
+    animation: blink .7s infinite;
+}
+
+@keyframes blink {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+section {
+    padding: 5rem 0;
+}
+
+section:nth-child(2n) {
+    background-color: #cecdcd;
+}
+
+section .title {
+    margin-bottom: 3rem;
+}
+section .title h4 {
+    font-size: 1.4rem;
+    color: #00ff00;
+}
+
+section .title h2 {
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+section .about-self::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+section .about-self .left {
+    width: 50%;
+    float: left;
+}
+section .about-self .left img {
+    width: 100%;
+}
+section .about-self .right {
+    width: 50%;
+    float: left;
+    padding: 0 2rem;
+}
+section .about-self .right h3 {
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+}
+section .about-self .right h3 strong {
+    color: #00ff00;
+}
+section .about-self .right p {
+    margin: 1rem 0;
+    font-size: 1.1rem;
+}
+
+
+section .do-me::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+section .do-me .do-inner {
+    width: 30%;
+    float: left;
+    background-color: #fff;
+    margin-right: 5%;
+    padding: 2rem;
+}
+section .do-me .do-inner:last-child {
+    margin-right: 0;
+}
+section .do-me .do-inner:hover {
+    background-color: #00ff00;
+    color: #fff;
+}
+section .do-me .do-inner h3 {
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+section .do-me .do-inner p {
+    font-size: 1.2rem;
+}
+
+
+.bg {
+    background: url('../images/background.jpg') center/cover fixed;
+    height: 600px;
+}
+
+
+section .portfolio-me::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+section .portfolio-me .portfolio-inner {
+    width: 30%;
+    margin-right: 5%;
+    padding: 1rem;
+    float: left;
+    background-color: #d1d1d1;
+    border: 1px solid #555;
+    margin-bottom: 3rem;
+
+}
+/* 작업물 칸의 갯수를 *의 배수로 넣을 수 있음 */
+section .portfolio-me .portfolio-inner:nth-child(3n) {
+    margin-right: 0;
+}
+section .portfolio-me .portfolio-inner img {
+    width: 100%;
+}
+section .portfolio-me .portfolio-inner strong {
+    color: #00ff00;
+    margin: 0.5rem 0;
+    display: block;
+}
+section .portfolio-me .portfolio-inner h3 {
+    font-size: 1.8rem;
+}
+
+section .contact-me::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+section .contact-me .left{
+    float: left;
+    width: 30%;
+}
+section .contact-me .left .card {
+    border: 1px solid #ccc;
+    margin-bottom: 1.25rem;
+    padding: 1rem;
+}
+section .contact-me .right {
+    float: left;
+    width: 65%;
+    margin-left: 5%;
+    border: 1px solid #ccc;
+    padding: 1rem;
+}
+section .contact-me .right .form-group {
+    margin-bottom: 1.3rem;
+}
+section .contact-me .right .form-group label {
+    display: block;
+    margin-bottom: 1rem;
+}
+section .contact-me .right .form-group input {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    outline: none;
+}
+section .contact-me .right .form-group input:focus {
+    border: 1px solid #00ff00;
+    background-color: #00ff00;
+}
+section .contact-me .right .form-group textarea {
+    width: 100%;
+    height: 300px;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    outline: none;
+    resize: none;
+}
+section .contact-me .right input[type="submit"] {
+    background-color: #00ff00;
+    width: 50%;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 1rem;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* javascript로 추가할 클래스 */
+header.on {
+    background-color: #000;
+    
+}

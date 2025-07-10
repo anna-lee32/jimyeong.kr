@@ -1,0 +1,127 @@
+@media screen and (max-width : 1140px) {
+    .home {
+        width: 1000px;
+    }
+}
+@media screen and (max-width: 1000px) {
+    html {
+        font-size: 14px;
+    }
+    .home {
+        width: 900px;
+    }
+}
+
+@media screen and (max-width : 900px) {
+    html {
+        font-size: 13px;
+    }
+    .home {
+        width: 800px;
+    }
+}
+@media screen and (max-width : 768px) {
+    html {
+        font-size: 12px;
+    }
+    .home {
+        width: 600px;
+    }
+    main .home .intro_text p {
+        font-size: 1.2rem;
+    }
+    .home .intro_text > h2 {
+        font-size: 4rem;
+    }
+    main .home .intro-wrap .intro_button a {
+        font-size: 1.2rem;
+    }
+    main .home .intro-wrap {
+        gap: 1rem;
+    }
+}
+
+@media screen and (max-width : 607px) {
+    .bar .logo a {
+        padding-left: 1rem;
+    }
+    header nav .menu > a {
+        padding: 1rem;
+    }
+    header nav .menu .lang {
+        gap: 0.5rem;
+    }
+    label {
+        width: 5rem;
+        height: 2rem;
+    }
+    label::after{
+        width: 2.2rem;
+        height: 1.65rem;
+        border-radius: 30px;
+        top: 0.22rem;
+        left: 0.35rem;
+    }
+    input:checked + label::after {
+        left: 4.7rem;
+        transform: translateX(-100%);
+        background: linear-gradient(180deg, #777,#3a3a3a);
+    }
+    label:active::after {
+        width: 3rem;
+    }
+    
+
+    .home {
+        width: 500px;
+    }
+    main .home  {
+        flex-direction: column;
+        justify-content: center;
+        gap: 5rem;
+    }
+    main .home .profile_pic  {
+        text-align: center;
+    }
+    main .home .profile_pic img {
+        width: 60%;
+    }
+    .intro-wrap {
+        text-align: center;
+    }
+}
+
+
+@media screen and (max-width : 480px) {
+    html {
+        font-size: 11px;
+    }
+    .home {
+        width: 300px;
+    }
+    header .bar {
+        flex-direction: column;
+    }
+    .bar .logo a {
+        padding-left: 0;
+    }
+    main .home {
+        top: 90%; left: 50%;
+        transform: translate(-50%, -90%);
+    }
+    .intro-wrap {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width : 320px) {
+    .home {
+        width: 150px;
+    }
+    main .home .profile_pic img {
+        width: 40%;
+    }
+    html {
+        font-size: 9px;
+    }
+}
