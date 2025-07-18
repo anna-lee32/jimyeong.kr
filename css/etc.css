@@ -91,7 +91,6 @@ section .about-ad .ad .even h3{
 /* AD */
 section .about-ad .explain{
     display: flex;
-    justify-content: center;
     gap: 3rem;
     margin-bottom: 6rem;
 }
